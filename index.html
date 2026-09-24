@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jenis-Jenis Karya Ilmiah - Kelompok 3 AK25A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--u:min(1vw,1.7778vh);--b:#3b6fe0;--bd:#2a55b8;--ink:#1c2740;--mut:#586a8c;--soft:#eef4ff;--line:#d3e2fa}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:linear-gradient(160deg,#eef4ff,#d6e5fb);display:grid;place-items:center;font-family:'Nunito',system-ui,'Segoe UI',Roboto,sans-serif;color:var(--ink);overflow:hidden}
+.stage{position:relative;width:calc(var(--u)*96);height:calc(var(--u)*54);background:linear-gradient(180deg,#fff,#f5f9ff);border-radius:calc(var(--u)*1.2);box-shadow:0 calc(var(--u)*1) calc(var(--u)*3) rgba(59,111,224,.2);overflow:hidden;font-size:calc(var(--u)*1.7)}
+.s{position:absolute;inset:0;padding:calc(var(--u)*4) calc(var(--u)*8) calc(var(--u)*4) calc(var(--u)*5);opacity:0;visibility:hidden;transform:translateX(calc(var(--u)*4));transition:opacity .4s,transform .5s,visibility .4s}
+.s.on{opacity:1;visibility:visible;transform:none}
+.bar{position:absolute;right:0;top:0;bottom:0;width:calc(var(--u)*4.5);background:var(--b);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:calc(var(--u)*2) 0;z-index:5}
+.bar span{writing-mode:vertical-rl;font-size:calc(var(--u)*1.2);font-weight:500}
+.bar button{background:none;border:0;color:#fff;font-size:calc(var(--u)*2);cursor:pointer;width:calc(var(--u)*3.4);height:calc(var(--u)*3.4);border-radius:50%}
+.bar button:hover{background:rgba(255,255,255,.2)}
+.bar button:focus-visible{outline:2px solid #fff}
+.nav{display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*.6)}
+h1{font-size:calc(var(--u)*6.4);line-height:1.08;font-weight:800}
+h1 b{color:var(--b)}
+h2{font-size:calc(var(--u)*3.4);font-weight:800;margin-bottom:calc(var(--u)*.8)}
+h3{font-size:calc(var(--u)*2);font-weight:700;margin-bottom:calc(var(--u)*.6);color:var(--bd)}
+p,li{line-height:1.5;color:var(--mut)}
+.lead{max-width:calc(var(--u)*62);margin-bottom:calc(var(--u)*2.2)}
+.card{background:#fff;border:1px solid var(--line);border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*1.8);box-shadow:0 calc(var(--u)*.4) calc(var(--u)*1.4) rgba(59,111,224,.12)}
+.g{display:grid;gap:calc(var(--u)*1.6)}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.pill{display:inline-block;background:var(--b);color:#fff;border-radius:99px;padding:calc(var(--u)*.4) calc(var(--u)*1.6);font-size:calc(var(--u)*1.5);font-weight:500;margin-right:calc(var(--u)*1)}
+.pill.o{background:#fff;color:var(--bd);border:1px solid var(--b)}
+.chips{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.8)}
+.chips li{list-style:none;background:var(--soft);border:1px solid var(--line);color:var(--bd);font-weight:500;border-radius:99px;padding:calc(var(--u)*.4) calc(var(--u)*1.4)}
+ul.d{padding-left:calc(var(--u)*2)}
+.cover{display:flex;align-items:center;justify-content:space-between}
+.arches{display:flex;gap:calc(var(--u)*1);margin-right:calc(var(--u)*2)}
+.arches i{display:block;width:calc(var(--u)*7.5);height:calc(var(--u)*30);border-radius:calc(var(--u)*4);background:linear-gradient(180deg,#9dbdf5,#3b6fe0)}
+.arches i:nth-child(2){height:calc(var(--u)*36);background:linear-gradient(180deg,#6f9bee,#2a55b8)}
+.arches i:nth-child(3){background:linear-gradient(180deg,#c6d9fa,#7fa5ef)}
+.who{margin-top:calc(var(--u)*2.4);line-height:1.6;color:var(--ink)}
+.who small{display:block;font-size:calc(var(--u)*1.4);color:var(--mut)}
+.lv{display:flex;align-items:center;gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*2)}
+.lv span{font-weight:700;color:var(--bd)}
+.lv em{font-style:normal;color:var(--mut)}
+.mid{display:flex;flex-direction:column;justify-content:center}
+h1,h2,h3,.pill,.card b,.lv span,.q{font-family:'Fredoka','Nunito',system-ui,sans-serif}
+h1,h2{font-weight:700}h3,.card b,.pill,.lv span{font-weight:600}
+.card{transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(calc(var(--u)*-.6));box-shadow:0 calc(var(--u)*1) calc(var(--u)*2.2) rgba(59,111,224,.25)}
+.q{width:calc(var(--u)*12);height:calc(var(--u)*12);border-radius:50%;background:var(--b);color:#fff;font-size:calc(var(--u)*7);font-weight:700;display:grid;place-items:center;margin-bottom:calc(var(--u)*2.5);box-shadow:0 0 0 calc(var(--u)*1.2) rgba(59,111,224,.15)}
+@keyframes rise{from{opacity:0;transform:translateY(calc(var(--u)*2.5))}}
+@keyframes up{from{opacity:0;transform:translateY(calc(var(--u)*9))}}
+@keyframes flt{50%{transform:translateY(calc(var(--u)*-1.3))}}
+@keyframes pulse{50%{transform:scale(1.1)}}
+.s.on>*,.s.on .g>*,.s.on .chips li,.s.on.cover>div>*{animation:rise .65s cubic-bezier(.2,.7,.2,1) backwards}
+.s.on>*,.s.on.cover>div>*{animation-delay:calc(var(--i,0)*.12s)}
+.s.on .g>*,.s.on .chips li{animation-delay:calc(.25s + var(--i,0)*.09s)}
+.s.on.cover>div,.s.on>.arches{animation:none}
+.s.on .arches i{animation:up 1s cubic-bezier(.2,.7,.2,1) backwards calc(.2s + var(--i,0)*.15s),flt 4s ease-in-out calc(1.4s + var(--i,0)*.4s) infinite}
+.s.on .q{animation:rise .6s backwards,pulse 2.4s ease-in-out 1s infinite}
+.qa{display:flex;align-items:center;justify-content:space-between}
+.qa img{height:calc(var(--u)*41);width:auto;mix-blend-mode:multiply}
+.s.on>img{animation:rise .7s backwards .3s,flt 4s ease-in-out 1.2s infinite}
+@media (prefers-reduced-motion:reduce){.s{transition:opacity .3s;transform:none}.s.on .arches i,.s.on .q,.s.on>img{animation:rise .6s backwards}}
+</style>
+</head>
+<body>
+<main class="stage" id="stage">
+
+<section class="s cover on">
+  <div>
+    <p style="font-weight:500;margin-bottom:calc(var(--u)*1.2)">Mata kuliah Berfikir &amp; Menulis Ilmiah</p>
+    <h1><b>Jenis-Jenis</b><br>Karya Ilmiah</h1>
+    <p style="margin-top:calc(var(--u)*2)"><span class="pill">Kelompok 3</span><span class="pill o">Kelas AK25A</span></p>
+    <div class="who">
+      <b>Ilham Dwi Kusuma</b> (32425041)<br><b>Nafis Hanuna</b> (32425056)
+      <small>Prodi Akuntansi, Universitas Nahdlatul Ulama Sidoarjo</small>
+    </div>
+  </div>
+  <div class="arches"><i></i><i></i><i></i></div>
+</section>
+
+<section class="s">
+  <h2>Apa itu karya ilmiah?</h2>
+  <p class="lead">Tulisan yang disusun dengan kaidah dan metode ilmiah. Ada lima cirinya:</p>
+  <ul class="chips" style="margin-bottom:calc(var(--u)*2.6)"><li>Teoritis</li><li>Lugas dan logis</li><li>Efektif dan efisien</li><li>Objektif</li><li>Sistematis</li></ul>
+  <h3>Delapan jenis yang dibahas buku</h3>
+  <div class="g g4">
+    <div class="card"><b>Artikel/Jurnal Ilmiah</b></div><div class="card"><b>Makalah</b></div>
+    <div class="card"><b>Kertas Kerja</b></div><div class="card"><b>Paper</b></div>
+    <div class="card"><b>Skripsi</b></div><div class="card"><b>Tesis</b></div>
+    <div class="card"><b>Disertasi</b></div><div class="card"><b>Artikel Ilmiah Populer</b></div>
+  </div>
+</section>
+
+<section class="s">
+  <h2>Artikel/Jurnal Ilmiah</h2>
+  <p class="lead">Karya tulis yang dirancang untuk dimuat di jurnal atau kumpulan artikel, ditulis dengan tata cara ilmiah. Isinya bersumber dari hasil penelitian, pemikiran, kajian pustaka, atau pengembangan proyek.</p>
+  <div class="g g2">
+    <div class="card"><h3>Fungsi jurnal</h3><ul class="d"><li>Sarana komunikasi antarilmuwan</li><li>Media penyebaran hasil penelitian</li><li>Mengembangkan budaya akademik kampus</li><li>Sumber pengetahuan baru</li></ul></div>
+    <div class="card"><h3>Komponen artikel</h3><ol class="d"><li>Judul (disarankan maksimal 14 kata)</li><li>Nama penulis dan abstrak</li><li>Pendahuluan</li><li>Bahan dan metode</li><li>Hasil dan pembahasan</li><li>Simpulan dan daftar pustaka</li></ol></div>
+  </div>
+</section>
+
+<section class="s">
+  <h2>Makalah</h2>
+  <p class="lead">Karya tulis ilmiah yang membahas suatu masalah berdasarkan data lapangan yang empiris dan objektif, disajikan di seminar atau kelas. Ada tiga macam:</p>
+  <div class="g g3">
+    <div class="card"><h3>Tugas perkuliahan</h3><p>Sering disebut paper. Dibuat untuk memenuhi tugas dosen, bentuknya ditentukan dosen pengampu. Formatnya bagian awal, tengah (pendahuluan, pembahasan, penutup), dan akhir.</p></div>
+    <div class="card"><h3>Tugas akhir</h3><p>Syarat menyelesaikan program studi tertentu, misalnya diploma III. Untuk S1, di institusi tertentu bisa jadi pengganti skripsi.</p></div>
+    <div class="card"><h3>Seminar</h3><p>Ditulis untuk dibahas di pertemuan ilmiah seperti seminar atau konferensi. Ketentuannya mengikuti panitia penyelenggara.</p></div>
+  </div>
+</section>
+
+<section class="s">
+  <h2>Skripsi</h2>
+  <p class="lead">Karya tulis ilmiah wajib mahasiswa untuk menyelesaikan jenjang S1. Pendapat penulis harus didukung teori orang lain serta data dan fakta empiris. Umumnya tebalnya 50 sampai 100 halaman.</p>
+  <h3>Tiga jenis skripsi</h3>
+  <div class="g g3">
+    <div class="card"><b>Kajian pustaka</b><p>Membahas topik lewat kajian kritis dan mendalam terhadap bahan pustaka yang relevan.</p></div>
+    <div class="card"><b>Penelitian lapangan</b><p>Mengumpulkan data empiris, lalu menganalisisnya dengan teori yang relevan untuk menarik kesimpulan.</p></div>
+    <div class="card"><b>Pengembangan</b><p>Merancang kegiatan untuk memecahkan masalah aktual dengan menerapkan teori, konsep, dan temuan penelitian.</p></div>
+  </div>
+</section>
+
+<section class="s">
+  <h2>Tesis dan Disertasi</h2>
+  <div class="g g2">
+    <div class="card"><h3>Tesis (S2)</h3><p>Syarat gelar magister. Cakupan penelitiannya lebih luas dari skripsi dan teorinya lebih komprehensif, sehingga kesimpulan berlaku lebih umum. Penulis mengembangkan kerangka pemikiran dari teori yang sudah ada, dengan analisis data bivariat atau multivariat.</p></div>
+    <div class="card"><h3>Disertasi (S3)</h3><p>Syarat gelar doktor. Harus memberi sumbangan baru bagi ilmu pengetahuan. Kerangka pemikirannya dirumuskan sendiri secara orisinal, dianalisis dengan metode yang lebih kompleks, dan bisa menghasilkan teori, konsep, atau metode baru.</p></div>
+  </div>
+  <div class="lv"><span>Skripsi (S1)</span><em>&rarr;</em><span>Tesis (S2)</span><em>&rarr;</em><span>Disertasi (S3)</span><em>: cakupan dan kedalaman makin bertambah</em></div>
+</section>
+
+<section class="s qa">
+  <div class="qt">
+    <div class="q">?</div>
+    <h2 style="font-size:calc(var(--u)*4.2);max-width:calc(var(--u)*46)">Apakah ada pertanyaan mengenai materi power point kami?</h2>
+    <p class="lead" style="margin-top:calc(var(--u)*1)">Silakan sampaikan pertanyaan, tanggapan, atau masukannya.</p>
+  </div>
+  <img src="img/mikir-kids.webp" alt="Stiker 'mikir kids!!'">
+</section>
+
+<section class="s mid">
+  <h2 style="font-size:calc(var(--u)*5.2);color:var(--b)">Terima kasih</h2>
+  <p class="lead" style="margin-top:calc(var(--u)*1)">Kelompok 3, kelas AK25A, mata kuliah Berfikir &amp; Menulis Ilmiah</p>
+  <p style="color:var(--ink)"><b>Ilham Dwi Kusuma</b> dan <b>Nafis Hanuna</b></p>
+  <p style="margin-top:calc(var(--u)*2);font-size:calc(var(--u)*1.4)">Sumber: Ebook Penulisan Karya Ilmiah, Bab 5 (Jenis-Jenis Karya Ilmiah)</p>
+</section>
+
+<div class="bar">
+  <span>AK25A &middot; Kelompok 3</span>
+  <div class="nav">
+    <button id="prev" aria-label="Slide sebelumnya">&#9664;</button>
+    <b id="ct" style="font-size:calc(var(--u)*1.2)">1/8</b>
+    <button id="next" aria-label="Slide berikutnya">&#9654;</button>
+  </div>
+</div>
+</main>
+<script>
+const S=[...document.querySelectorAll('.s')],ct=document.getElementById('ct');
+let i=Math.max(0,Math.min(S.length-1,(parseInt(location.hash.slice(1))||1)-1));
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('on',k===i));ct.textContent=(i+1)+'/'+S.length;history.replaceState(null,'','#'+(i+1))}
+document.getElementById('prev').onclick=()=>go(i-1);
+document.getElementById('next').onclick=()=>go(i+1);
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(i+1)}if(['ArrowLeft','PageUp'].includes(e.key))go(i-1);if(e.key==='Home')go(0);if(e.key==='End')go(S.length-1)});
+let x0=null;addEventListener('touchstart',e=>x0=e.touches[0].clientX);
+addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)go(i+(d<0?1:-1));x0=null});
+document.querySelectorAll('.s,.g,.chips,.cover>div,.arches').forEach(p=>[...p.children].forEach((c,k)=>c.style.setProperty('--i',k)));
+go(i);
+</script>
+</body>
+</html>
